@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>
+        Contact Information
+    </title>
+    
+    <link rel="stylesheet" href="style.css"><!--link to stylesheet -->
+
+</head>
+
+
+
+
+
+<body>
+    
+    <header>
+        <h1>Thomas Williams</h1><!--title is centered-->
+        <nav><!--Nav bar with links to different pages are styled-->
+            <a href = "index.html"> Home </a>  &nbsp;
+            <a href = "aboutMe.html"> About Me </a> &nbsp;
+            <a href ="valueProposition.html">Value Proposition</a>&nbsp;
+            <a href = "projectShow.html"> Project Showcase </a>&nbsp;
+            <a href = "contact.html"> Contact Information </a>  
+        </nav>
+
+    </header>
+    
+    <!--Form for user to enter their email and send me a message-->
+    <section id="contactSection"> 
+        <h2> Send me a message! </h2>
+        
+       
+        <form action="mailto:your_email@example.com" method="POST" enctype="multipart/form-data">
+            <label for="email">Your Email Address:</label>
+            <input type="email" id="email" name="email" class="userInput" required>
+        
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" class="userInput" required></textarea>
+        
+            <button type="submit" id="formButton">Send Message</button>
+        </form>
+
+    </section>
+
+
+<!--Copywrite is in italics, small and centered-->
+    <footer>
+    <br>
+    Copyright:<br>
+    &copy;  2025 Thomas Williams
+</footer>
+
+</body>
+
+
+</html>

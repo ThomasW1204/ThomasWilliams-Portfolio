@@ -1,0 +1,294 @@
+/*----------Style for all pages----------*/
+
+/*FIX COLORS*/
+
+header{ /*This centers the text, changes the font, and sets the background color for the header on all pages*/
+    display:grid;
+    text-align: center;
+    font-family:courier;
+    background-color: #F4EAE0;
+
+}
+p{
+    font-family:courier;
+    font-size: large;
+}
+
+footer{ /*This makes the text small,sets text to italic, centers, and changes both background color and text color for the footer*/
+    font-size:small;
+    font-style: italic;
+    text-align: center;
+
+    color:#2C6975;
+    font-family:courier;
+
+
+
+}
+
+li{
+    font-family:courier;
+
+}
+a{
+    font-family:courier;
+
+}
+h2{    font-family:courier;
+}
+
+label{
+    
+ font-family:courier;
+
+}
+
+
+nav{ /*Changes background color, adjusts the hight, sets display to flex in order to center the content inside*/
+
+    background-color: #2C6975;
+    height: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family:courier;
+
+}
+nav a{ /*Focuses on the a tag in nav. removes the underline, sets text color, and adjusts padding and margin for proper spacing*/
+    text-decoration: none;
+    color:#F4EAE0;
+    padding:10px;
+    margin: 50px;
+}
+
+nav a:hover{ /*When the nav link is hovered over change text color, background color, and round the corners*/
+    color: #2C6975; 
+    background-color: #A4B494;
+    border-radius: 5px; 
+    transform:scale(1.05);
+
+}
+
+body{ /*change the color of the background of the body*/
+background-color: #F4EAE0;
+
+}
+
+
+/*----------Style for index----------*/
+
+#homeSection{/*This centers the text and chagnes the font to arial for the "homeSection" This includes an image and a paragraph*/
+    text-align: center;
+    font-family: arial;
+}
+
+img{/*Formats the image by setting hight,width,padding,adding a colored border, and rounding that border*/
+    width: 240px;
+    height: 240px;
+    padding-top:25px;
+    border:1px solid;
+    border-color:#A4B494;
+    border-radius: 10px;
+
+}
+
+/*The "homeButtonSection" is a div that includes all of the buttons on the home page, This sets the background color, creates space by 
+adding padding and margin, sets the width of the div, and adds a roundered border. It also uses the display flex to center the buttons,wrap to the next line, and add
+space between each button using gap */
+#homeButtonSection{ 
+    padding:25px;
+    margin:25px;
+    background-color: #A4B494;
+    border-radius: 10px;
+    justify-content: center;
+    justify-self: center;
+    display: grid;
+    gap: 10px;
+    width: 85%;
+    grid-template-columns: repeat(3, 300px); /* Default 3 columns for larger screens */
+}
+
+/* Desktop: 3 items in the first row */
+@media (min-width: 1025px) {
+    #homeButtonSection {
+        grid-template-columns: repeat(3, 300px);
+    }
+
+    /* Contact button spans all columns */
+    #contactButton {
+        grid-column: span 3; /* Make contact button span all columns */
+    }
+}
+
+/* Tablet: 2 items per row */
+@media (max-width: 1024px) and (min-width: 769px) {
+    #homeButtonSection {
+        grid-template-columns: repeat(2, 300px);
+    }
+
+    /* Contact button spans both columns in tablet view */
+    #contactButton {
+       width:300px;
+       height:150px;
+    }
+}
+
+/* Mobile: 1 item per row */
+@media (max-width: 768px) {
+    #homeButtonSection {
+        grid-template-columns: 300px;
+    }
+
+    /* Contact button spans full width on mobile */
+    #contactButton {
+        grid-column: span 1;
+    }
+}
+
+
+/*This formats the buttons on the home page. it does this by setting the height,background color, text color,and ensuring there are no solid borders.
+It also rounds the cornners and creates space by adding horizontal padding. Finally it sets the font size, width of the button, and aligns the text inside to centered */
+
+.buttons{ 
+ width:300px;
+ height: 150px;
+    background-color: #2C6975;
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-size: 16px;
+    text-align: center;
+    font-family:courier;
+
+}
+
+button:hover{
+   
+    border-radius: 5px;
+    transform:scale(1.05);
+
+}
+
+/*This is just for the contact button on the home page. It sets the width to 100%, centers the buttons content with Flexbox, and removes text decoration*/
+
+
+#contactButton button { /*This is needed to style the button inside of the container. it ensures it takes 45% of the containers width */
+
+    width: 100%; 
+    height:150px;
+       background-color: #2C6975;
+       color: white; 
+       border: none;
+       border-radius: 5px;
+       padding: 0 20px;
+       font-size: 16px;
+       text-align: center;
+       font-family:courier;
+
+}
+
+
+/*----------Style for aboutMe----------*/
+
+/*This styles the section in the about me page. it contains a p tag, li tags, h2 tags, ol tags, and ul tags.
+It sets the background color, creates space by using padding and margin and finally sets the text color and font. */
+#aboutMeSection{ 
+    background-color:#A4B494;
+    padding: 15px;
+    margin:20px;
+    color:black;
+    font-family: courier;
+
+}
+
+
+
+/*----------Style for projectShow----------*/
+/*This styles the section in projectShow that contains a h2 tag, li tags, ul tags, and video tags.
+It sets the background color, creates space by using padding and margin and finally sets the text color and font.*/
+#projectSection{ 
+    background-color:#A4B494;
+    padding: 15px;
+    margin:20px;
+    color:black;
+    font-family: arial;
+
+}
+
+#githubLink{ /*This is used to style the github link. The text is underlined and colored blue so the user can tell its a link*/
+    text-decoration:underline;
+    color:blue;
+
+
+}
+
+/*----------Style for contact----------*/
+
+#contactSection{  /*this styles the section on the contact page. It does this by changing the color, adding padding, margin, adn chagne the text color and font. */
+    background-color:#A4B494;
+    padding: 15px;
+    margin:20px;
+    color:black;
+    font-family: arial;
+
+}
+
+#contactSection{/*This is used to style the links. The text is underlined and colored blue so the user can tell its a link*/
+    display:grid; 
+
+}
+
+form{
+    display:grid;
+}
+
+@media (min-width: 1025px) {
+    form {
+        grid-template-columns: repeat(2, 300px);
+    }
+
+    /* Contact button spans all columns */
+   
+}
+
+/* Tablet: 2 items per row */
+@media (max-width: 1024px) and (min-width: 769px) {
+    form {
+        grid-template-columns: repeat(2, 300px);
+    }
+
+    /* Contact button spans both columns in tablet view */
+   
+}
+
+/* Mobile: 1 item per row */
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: 300px;
+    }
+
+    /* Contact button spans full width on mobile */
+    
+}
+
+
+#formButton{
+    height:75px ; 
+    width:150px; 
+}
+#userInput{
+width:300px;
+}
+
+/*for value proposition */
+
+
+#proposition{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A4B494;
+    padding:25px;
+    margin:25px;
+}
